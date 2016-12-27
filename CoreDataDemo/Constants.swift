@@ -17,8 +17,8 @@ let _userDefault    = UserDefaults.standard
 let _appDelegator   = UIApplication.shared.delegate! as! AppDelegate
 
 // MARK: Global Functions
-// Comment in release mode
 func jprint(items: Any...) {
+    // Comment in release mode
     for item in items {
         print(item)
     }
