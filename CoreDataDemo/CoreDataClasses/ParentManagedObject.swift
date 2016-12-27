@@ -9,27 +9,9 @@
 import CoreData
 
 
-//func coreDataobject<T: NSManagedObject>(entityName: String, aId: String, key: String) -> T? {
-//    let fetchRequest = NSFetchRequest()
-//    let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: _appDelegator.managedObjectContext!)
-//    fetchRequest.fetchLimit = 1
-//    fetchRequest.entity = entity
-//    fetchRequest.predicate = NSPredicate(format: "\(key) = '\(aId)'")
-//    do {
-//        let fetches = (try _appDelegator.managedObjectContext!.executeFetchRequest(fetchRequest)) as! [T]
-//        if !fetches.isEmpty {
-//            return fetches[0]
-//        } else {
-//            return nil
-//        }
-//    } catch let error as  NSError {
-//        print("Error in fetching " + entityName + "Error detail: " + error.localizedDescription)
-//        return nil
-//    }
-//}
-
 //MARK: - NSManagedObject
 extension NSManagedObject {
+    
     class func entityName() -> String {
         return "\(self.classForCoder())"
     }
@@ -46,20 +28,13 @@ extension NSManagedObject {
         }
         _appDelegator.saveContext()
     }
+    
 }
 
 //MARK: - Protocol ParentManagedObject
 protocol ParentManagedObject {
     
-//    /***
-//     It will insert new object record in database and return NSManagedObject
-//     */
-//    static func insertNewObject() -> NSManagedObject
-//    
-//    /***
-//     It will update object record if exists otherwise insert new object record in database and return NSManagedObject
-//     */
-//    static func updateExistingObject(byKey: String, value: String) -> NSManagedObject
+    
 }
 
 extension ParentManagedObject where Self: NSManagedObject {
@@ -72,8 +47,10 @@ extension ParentManagedObject where Self: NSManagedObject {
         return object
     }
     
-    
-    static func addUpdateEntity(key: String,value:NSString) -> Self {
+    /***
+     It will create a new entity in database by passing its name and return NSManagedObject, if object with that primary key already exist it will fetch that object and return.
+     */
+    static func createNewEntity(key: String,value:NSString) -> Self {
         let predicate = NSPredicate(format: "%K = %@",key,value)
         
         let results = fetchDataFromEntity(predicate: predicate, sortDescs: nil)
@@ -85,6 +62,21 @@ extension ParentManagedObject where Self: NSManagedObject {
             entity = results.first!
         }
         return entity
+    }
+    
+    /***
+     It will check for entity with that primary key  if found object will get return or will return nil.
+     */
+    static func checkEntity(key: String,value:NSString) -> Self? {
+        let predicate = NSPredicate(format: "%K = %@",key,value)
+        
+        let results = fetchDataFromEntity(predicate: predicate, sortDescs: nil)
+        
+        if results.isEmpty{
+            return nil
+        }else{
+            return results.first
+        }
     }
 
     

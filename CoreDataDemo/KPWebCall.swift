@@ -83,14 +83,6 @@ class KPWebCall:NSObject{
                     if errorDict != nil {
                         jprint(items: "Error(\(relativePath)): \(errorDict!)")
                         block(errorDict!, response.statusCode)
-                        if response.statusCode == 423{
-//                            let nav = _appDelegator.window?.rootViewController as! KPNavigationViewController
-//                            let pre = nav.presentedViewController
-//                            pre?.dismissViewControllerAnimated(false, completion: nil)
-//                            nav.popToRootViewControllerAnimated(true)
-//                            _appDelegator.prepareToSignOut()
-//                            ValidationToast.showStatusMessage(kTokenExpire,yCord: 20)
-                        }
                     } else {
                         let code = response.statusCode
                         block(nil, code)

@@ -60,7 +60,7 @@ extension APIDataVC{
                     if let arr = data["employeeList"] as? [NSDictionary]{
                         var tempArr: [User] = []
                         for dic in arr{
-                            let user = User.addUpdateEntity(key: "id", value: dic.getStringValue(key: "id") as NSString)
+                            let user = User.createNewEntity(key: "id", value: dic.getStringValue(key: "id") as NSString)
                             user.initWith(data: dic)
                             tempArr.append(user)
                             _appDelegator.saveContext()
