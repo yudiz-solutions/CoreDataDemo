@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class User: NSManagedObject, ParentManagedObject {
+class User: NSManagedObject, KPParentManagedObject {
     @NSManaged var id : Int32
     @NSManaged var name : String
     

@@ -9,6 +9,6 @@
 import Foundation
 import CoreData
 
-class Employee: NSManagedObject, ParentManagedObject {
+class Employee: NSManagedObject, KPParentManagedObject {
     @NSManaged var name : String
 }

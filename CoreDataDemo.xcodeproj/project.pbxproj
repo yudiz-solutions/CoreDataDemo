@@ -15,7 +15,7 @@
 		039458D11E025C47001B3547 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 039458CF1E025C47001B3547 /* CoreDataDemo.xcdatamodeld */; };
 		039458D31E025C47001B3547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039458D21E025C47001B3547 /* Assets.xcassets */; };
 		039458D61E025C47001B3547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039458D41E025C47001B3547 /* LaunchScreen.storyboard */; };
-		039458DF1E025E63001B3547 /* ParentManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039458DE1E025E63001B3547 /* ParentManagedObject.swift */; };
+		039458DF1E025E63001B3547 /* KPParentManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039458DE1E025E63001B3547 /* KPParentManagedObject.swift */; };
 		039458E11E025ED3001B3547 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039458E01E025ED3001B3547 /* Constants.swift */; };
 		039458E31E026717001B3547 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039458E21E026717001B3547 /* Employee.swift */; };
 		039458E51E0268C5001B3547 /* AddDisEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039458E41E0268C5001B3547 /* AddDisEmployeeVC.swift */; };
@@ -33,7 +33,7 @@
 		039458D21E025C47001B3547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		039458D51E025C47001B3547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039458D71E025C47001B3547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		039458DE1E025E63001B3547 /* ParentManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentManagedObject.swift; sourceTree = "<group>"; };
+		039458DE1E025E63001B3547 /* KPParentManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPParentManagedObject.swift; sourceTree = "<group>"; };
 		039458E01E025ED3001B3547 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		039458E21E026717001B3547 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		039458E41E0268C5001B3547 /* AddDisEmployeeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddDisEmployeeVC.swift; path = CoreDataDemo/AddDisEmployeeVC.swift; sourceTree = SOURCE_ROOT; };
@@ -93,7 +93,7 @@
 		039458DD1E025E63001B3547 /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				039458DE1E025E63001B3547 /* ParentManagedObject.swift */,
+				039458DE1E025E63001B3547 /* KPParentManagedObject.swift */,
 				039458E21E026717001B3547 /* Employee.swift */,
 				031D35F91E02B3C900F328C7 /* User.swift */,
 			);
@@ -244,7 +244,7 @@
 				031D35F81E02B26A00F328C7 /* APIDataVC.swift in Sources */,
 				039458E31E026717001B3547 /* Employee.swift in Sources */,
 				039458D11E025C47001B3547 /* CoreDataDemo.xcdatamodeld in Sources */,
-				039458DF1E025E63001B3547 /* ParentManagedObject.swift in Sources */,
+				039458DF1E025E63001B3547 /* KPParentManagedObject.swift in Sources */,
 				039458C91E025C47001B3547 /* AppDelegate.swift in Sources */,
 				031D35F41E02AF8E00F328C7 /* KPWebCall.swift in Sources */,
 				031D35FA1E02B3C900F328C7 /* User.swift in Sources */,

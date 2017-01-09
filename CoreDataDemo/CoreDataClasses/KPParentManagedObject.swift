@@ -32,12 +32,12 @@ extension NSManagedObject {
 }
 
 //MARK: - Protocol ParentManagedObject
-protocol ParentManagedObject {
+protocol KPParentManagedObject {
     
     
 }
 
-extension ParentManagedObject where Self: NSManagedObject {
+extension KPParentManagedObject where Self: NSManagedObject {
     
     /***
      It will create a new entity in database by passing its name and return NSManagedObject
